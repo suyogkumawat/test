@@ -7,6 +7,7 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 
 Full Process
 
+```bash
  26  curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
    27  chmod 700 get_helm.sh
    28  ./get_helm.sh
@@ -25,4 +26,4 @@ Full Process
    41  kubectl port-forward svc/kind-prometheus-kube-prome-prometheus -n monitoring 9090:9090 --address=0.0.0.0 &
    42  kubectl get svc -n monitoring
    43  kubectl port-forward svc/kind-prometheus-grafana -n monitoring 3000:80 --address=0.0.0.0 &
-
+```
